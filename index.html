@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>AFFILIATE PRO TOOLS</title>
   
-<link rel="stylesheet" href="style.css">
-<style>
+<link
+<style> ... <style>
   
 body{
   font-family: Arial;
@@ -351,7 +351,12 @@ console.log("HTML loaded");
    BASE DARK THEME FIXED
 ========================= */
 html, body {
-  background: #f4f4f4;
+  background:#f4f4f4;
+  font-family: Arial;
+  margin:0;
+  padding:20px;
+  color:#111;
+}
   font-family: Arial;
 }
 h1 {
@@ -372,7 +377,17 @@ h1 {
    FORM ELEMENTS
 ========================= */
 input, select, textarea{
-  background:#0c0c14 !important;
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  margin-bottom:10px;
+  border-radius:10px;
+
+  background:#1a1a1a;
+  color:#fff;
+  border:1px solid #333;
+}
+!important;
   color:#ffffff !important;
   border:1px solid rgba(168,85,247,0.25) !important;
   border-radius:10px;
@@ -405,7 +420,13 @@ input[type="file"]{
    OUTPUT CARD (FIX UTAMA)
 ========================= */
 .card{
-  background:#151522 !important;
+  background:#111;
+  color:#fff;
+  border:1px solid #222;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+} !important;
   color:#ffffff !important;
   border:1px solid rgba(255,255,255,0.08);
   padding:12px;
@@ -426,8 +447,13 @@ pre{
 /* =========================
    TEXT FIX
 ========================= */
-h2, h3, label{
-  color:#ffffff !important;
+label{
+  font-weight:bold;
+  display:block;
+  margin-top:10px;
+  color:#ffffff;
+}
+!important;
 }
 
 .desc{
