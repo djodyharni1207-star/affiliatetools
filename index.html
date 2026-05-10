@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>AFFILIATE PRO TOOLS</title>
-  
-<link rel="stylesheet" href="/style.css">
-  
-body{
-  font-family: Arial;
+
+<style>
+/* =========================
+   BASE
+========================= */
+html, body {
   background:#f4f4f4;
+  font-family: Arial;
+  margin:0;
   padding:20px;
+  color:#111;
 }
 
-h2{ margin-bottom:5px; }
-
-.desc{
-  font-size:12px;
-  color:#666;
-  margin-bottom:10px;
+* {
+  box-sizing:border-box;
 }
 
-.section{
+/* =========================
+   SECTION
+========================= */
+.section {
   background:#fff;
   padding:16px;
   margin-bottom:16px;
@@ -28,42 +31,69 @@ h2{ margin-bottom:5px; }
   border:1px solid #ddd;
 }
 
-label{
+/* =========================
+   LABEL (FIX: PUTIH)
+========================= */
+label {
   font-weight:bold;
   display:block;
   margin-top:10px;
+  color:#fff;
 }
 
-input,select,textarea{
+/* =========================
+   INPUT
+========================= */
+input, select, textarea {
   width:100%;
-  padding:8px;
+  padding:10px;
   margin-top:5px;
   margin-bottom:10px;
+  border-radius:10px;
+
+  background:#1a1a1a;
+  color:#fff;
+  border:1px solid #333;
 }
 
-button{
-  padding:12px;
+option {
+  background:#1a1a1a;
+  color:#fff;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
   width:100%;
+  padding:12px;
   background:#111;
   color:#fff;
   border:none;
   border-radius:8px;
+  cursor:pointer;
 }
 
-button:hover{ background:#333; }
+button:hover {
+  background:#333;
+}
 
-#output{ margin-top:20px; }
-
-.card{
-  background:#fff;
-  border:1px solid #ddd;
+/* =========================
+   CARD OUTPUT (DARK)
+========================= */
+.card {
+  background:#111;
+  color:#fff;
+  border:1px solid #222;
   padding:12px;
   margin-top:10px;
   border-radius:10px;
 }
 
-/* UX */
-.saas-bar{
+/* =========================
+   SAAS BAR
+========================= */
+.saas-bar {
   position:sticky;
   top:0;
   background:#111;
@@ -74,7 +104,7 @@ button:hover{ background:#333; }
   font-size:12px;
 }
 
-.badge{
+.badge {
   background:#111;
   color:#fff;
   padding:2px 6px;
@@ -82,8 +112,36 @@ button:hover{ background:#333; }
   font-size:10px;
 }
 
-.other-box{
+/* =========================
+   OTHER INPUT HIDE
+========================= */
+.other-box {
   display:none;
+}
+
+/* =========================
+   OUTPUT TEXT FIX
+========================= */
+pre {
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  color:#fff;
+  background:transparent;
+}
+
+/* =========================
+   BACKGROUND EFFECT
+========================= */
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(168,85,247,0.2), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(250,204,21,0.1), transparent 45%);
+  filter:blur(50px);
+  opacity:0.8;
 }
 </style>
 
@@ -326,6 +384,8 @@ placeholder="Tulis style sendiri">
 
 <div id="output"></div>
 
+  <script src="engine.js"></script>
+  
 <script>
 function toggleOther(select, id){
   const el = document.getElementById(id);
@@ -343,5 +403,4 @@ function toggleOther(select, id){
 console.log("HTML loaded");
 </script>
   
-  <script src="engine.js"></script>
   </body></html>
